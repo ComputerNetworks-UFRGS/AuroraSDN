@@ -153,9 +153,7 @@ $ git clone https://github.com/phisolani/floodlight.git
 Referencing and Citation
 -----------
 
-For academic work referencing and citation please read our paper "Interactive Monitoring, Visualization, and Configuration of OpenFlow-Based SDN" published... or the demo paper named "SDN Interactive Manager: An OpenFlow-Based SDN Manager" published at demonstration track of the same event. 
-
-at Elsevier Computer Networks - Volume 68 (2014) http://dx.doi.org/10.1016/j.comnet.2014.02.018.
+For academic work referencing and citation please read our paper "Interactive Monitoring, Visualization, and Configuration of OpenFlow-Based SDN" published at 14th IFIP/IEEE Symposium on Integrated Network and Service Management 2015 (IM 2015) in Ottawa or the demo paper named "SDN Interactive Manager: An OpenFlow-Based SDN Manager" published at demonstration track of the same event.
 
 
 Credits
