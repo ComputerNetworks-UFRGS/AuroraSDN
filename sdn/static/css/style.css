@@ -1,0 +1,117 @@
+/* Sticky footer styles */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 50px;
+}
+.aurora-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 50px;
+  background-color: #1b1b1b;
+}
+body > .first-container {
+  padding: 100px 15px 0;
+}
+.container .text-muted {
+  margin: 15px 0;
+}
+.aurora-footer > .container {
+  padding-top: 15px;
+  color: #fcfcfc;
+}
+/* End sticky footer */
+
+/* Main style customizations */
+body {
+    background-color: #fcfcfc;
+}
+.navbar-subnav {
+    border-top: 1px solid #666666;
+    top: 50px;
+}
+.aurora-header, .aurora-footer {
+    background-image: url("../img/top-aurora.png");
+    background-color: #1b1b1b;
+    background-repeat: repeat-x;
+    border-color: #252525;
+}
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
+    color: #fcfcfc;
+}
+.navbar-brand {
+    font-weight: bold;
+}
+table td.td-label {
+    font-weight: bold;
+    width: 164px;
+}
+.a-danger {
+    color: #c12e2a;
+}
+.a-danger:hover, .a-danger:active {
+    color: #b92c28;
+}
+/* Login */
+.logo {
+    text-align: center;
+    margin: 40px 0 30px 0;
+}
+.form-signin {
+    max-width: 300px;
+    margin: 0 auto 20px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.btn-google {
+    color: #fefefe;
+    text-shadow: 0 1px 1px rgba(20, 112, 148, 0.75);
+    background-color: #59c0e8;
+    background-image: linear-gradient(to bottom, #59c0e8 0, #1a92c1 100%);
+    background-repeat: repeat-x;
+    border-color: #1a92c1
+}
+
+.btn-google:hover, .btn-google:focus, .btn-google:active{
+    color: #fefefe;
+    background-color: #1a92c1;
+    background-position:0 -15px;
+}
+
+.btn-facebook {
+    color: #fefefe;
+    text-shadow: 0 1px 1px rgba(12, 44, 74, 0.75);
+    background-color: #217ace;
+    background-image: -moz-linear-gradient(top, #217ace, #134676);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#217ace), to(#134676));
+    background-image: -webkit-linear-gradient(top, #217ace, #134676);
+    background-image: -o-linear-gradient(top, #217ace, #134676);
+    background-image: linear-gradient(to bottom, #217ace, #134676);
+}
+
+.btn-facebook:hover, .btn-facebook:focus, .btn-facebook:active{
+    color: #fefefe;
+    background-color: #134676;
+}
+
+.icon-google {
+    background-image: url("../img/google.png");
+    background-position: 0;
+}
+.icon-facebook {
+    background-image: url("../img/facebook.png");
+    background-position: 0;
+}
+
+/* Forms */
+
+.help-inline {
+    line-height: 34px;
+}

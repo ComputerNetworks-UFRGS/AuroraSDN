@@ -1,0 +1,36 @@
+{% extends "sdn/base-content.html" %}
+{% block content-body %}
+<div class="row">
+  <div class="span12">
+  {% if controller_list %}
+    <table class="table table-striped table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Ip Address</th>
+          <th>REST API Port</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Type</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for controller in controller_list %}
+        <tr>
+            <td>{{ controller.ip_address }}</a></td>
+            <td>{{ controller.listen_port }}</a></td>
+            <td>{{ controller.name }}</td>
+            <td>{{ controller.description }}</td>
+            <td>{{ controller.get_controller_type_display }}</td>
+            <td><a class="btn btn-mini btn-danger btn-xs" href="/Aurora/sdn/resources/controllers/{{ controller.id }}/delete/">Delete</a>&nbsp<a class="btn btn-primary btn-xs" href="/Aurora/sdn/resources/controllers/{{ controller.id }}/sync/">Sync</a></td>
+            <!--<td><a class="btn btn-mini btn-danger" href="/Aurora/manager/switches/{{ switch.id }}/delete/">Delete</a></td>-->
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+{% else %}
+    <p>No Controllers are available.</p>
+{% endif %}
+  </div>
+</div>
+{% endblock %}

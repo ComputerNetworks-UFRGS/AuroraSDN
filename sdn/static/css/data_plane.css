@@ -1,0 +1,194 @@
+.bullet { font: 10px sans-serif; }
+.bullet .marker { stroke: #000; stroke-width: 2px; }
+.bullet .tick line { stroke: #666; stroke-width: .5px; }
+.bullet .range.s0 { fill: #eee; }
+.bullet .range.s1 { fill: #ddd; }
+.bullet .range.s2 { fill: #ccc; }
+.bullet .measure.s0 { fill: rgb(100,0,0); }
+.bullet .measure.s1 { fill: steelblue; }
+.bullet .title { font-size: 14px; font-weight: bold; }
+.bullet .subtitle { fill: #000; }
+
+svg {
+    background-color: lavender;
+    cursor: default;
+    -webkit-border-radius: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    font-family: "Helvetica Neue", Helvetica;
+}
+
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+path.link {
+    fill: none;
+    stroke: #000;
+    stroke-width: 4px;
+    cursor: default;
+}
+
+svg:not(.active):not(.ctrl) path.link {
+    cursor: pointer;
+}
+
+path.link.selected {
+    stroke-dasharray: 10,2;
+}
+
+path.link.dragline {
+    pointer-events: none;
+}
+
+path.link.hidden {
+    stroke-width: 0;
+}
+
+circle.node {
+    stroke-width: 1.5px;
+    cursor: pointer;
+}
+
+circle.node.reflexive {
+    stroke: #000 !important;
+    stroke-width: 2.5px;
+}
+
+text {
+    font: 12px sans-serif;
+    pointer-events: none;
+}
+
+text.id {
+    text-anchor: middle;
+    font-weight: bold;
+}
+
+/* css for line chart */
+.line {
+  fill: none;
+  stroke: #000;
+  stroke-width: 2px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+/* css for topology chart */
+#data_plane:-webkit-full-screen {
+    width: 100%;
+    height: 100%;
+}
+
+#data_plane:-moz-full-screen {
+    width: 100%;
+    height: 100%;
+}
+
+#fullscreen_button {
+    position: absolute;
+    right: 50px;
+    top: 868px;
+}
+
+#controller_selected_panel {
+    position: relative;
+    z-index: 2;
+    margin-top: -40px;
+    margin-left: 20px;
+    top: 50px;
+}
+
+#controller_memory_panel {
+    position: absolute;
+    width:90%;
+    z-index: 1;
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+#node_information_panel {
+    position: absolute;
+    width:90%;
+    z-index: 2;
+    margin-top: 120px;
+    margin-left: 10px;
+}
+
+#chart_panel {
+    position: relative;
+    z-index: 1;
+    margin-left: -15px;
+    margin-top: -73px;
+    top: 25px;
+}
+
+#chart_panel_footer {
+    cursor: pointer;
+}
+
+#chart_panel_content {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space : nowrap;
+    padding-top: 5px;
+    padding-bottom: 0px;
+}
+
+#rule_chart, #up_traffic_chart, #down_traffic_chart, #up_packets_chart, #down_packets_chart {
+  display: inline-block;
+}
+
+#rule_chart, up_traffic_chart, up_packets_chart {
+    margin-left: -20px;
+}
+
+#polling_interval_slider, #chart_update_slider, #idle_timeout_slider, #hard_timeout_slider, #panel_default_content {
+    margin-top: 10px;
+}
+
+#configurations_panel {
+    position: relative;
+    z-index: 1;
+    margin-top: -48px;
+}
+
+.link {
+  stroke: #888;
+  stroke-width: 1;
+  cursor: crosshair;
+}
+
+.link_selected {
+  stroke: #ff7f0e;
+}
+
+#dashboard_eye {
+    font-size: 20em;
+}
+
+#dashboard_globe {
+    font-size: 20em;
+}
+
+.icon_modules {
+    font-size: 8em;
+}
+
+#data_plane_content {
+    margin-top: 10px;
+}

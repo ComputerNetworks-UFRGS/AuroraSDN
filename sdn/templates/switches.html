@@ -1,0 +1,45 @@
+{% extends "sdn/base-content.html" %}
+{% block content-body %}
+<div class="row">
+  <div class="span12">
+  {% if switch_list %}
+    <table class="table table-striped table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Buffers</th>
+          <th>Software</th>
+          <th>Hardware</th>
+          <th>Manufacturer</th>
+          <th>Serial Number</th>
+          <th>Datapath</th>
+          <th>Capabilities</th>
+          <th>Inet Address</th>
+          <th>Connected Since</th>
+          <th>DPID</th>
+          <th>Controller</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for switch in switch_list %}
+        <tr>
+            <td>{{ switch.buffers }}</td>
+            <td>{{ switch.software }}</td>
+            <td>{{ switch.hardware }}</td>
+            <td>{{ switch.manufacturer }}</td>
+            <td>{{ switch.serial_num }}</td>
+            <td>{{ switch.datapath }}</td>
+            <td>{{ switch.capabilities }}</td>
+            <td>{{ switch.inet_address }}</td>
+            <td>{{ switch.connected_since }}</td>
+            <td>{{ switch.dpid }}</td>
+            <td>{{ switch.controller }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+{% else %}
+    <p>No Switches are available.</p>
+{% endif %}
+  </div>
+</div>
+{% endblock %}

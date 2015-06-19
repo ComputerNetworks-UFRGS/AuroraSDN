@@ -1,0 +1,29 @@
+{% extends "sdn/base-content.html" %}
+{% block content-body %}
+<div class="row">
+  <div class="span12">
+  {% if host_list %}
+    <table class="table table-striped table-hover table-bordered">
+      <thead>
+        <tr>
+          <th>Host MAC</th>
+          <th>Host IP Address</th>
+          <th>Controller</th>
+        </tr>
+      </thead>
+      <tbody>
+      {% for host in host_list %}
+        <tr>
+            <td>{{ host.mac_address }}</td>
+            <td>{{ host.ipv4_address}}</td>
+            <td>{{ host.controller }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+{% else %}
+    <p>No Hosts are available.</p>
+{% endif %}
+  </div>
+</div>
+{% endblock %}

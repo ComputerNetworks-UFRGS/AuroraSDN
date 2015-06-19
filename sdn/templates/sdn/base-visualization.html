@@ -1,0 +1,46 @@
+{% extends request.is_ajax|yesno:"sdn/base-home-ajax.html,sdn/base-home.html" %}
+{% load widget_tweaks %}
+{% load inspect %}
+{% block content %}
+<div id="main-container" class="first-container">
+  <div id="data_plane_content" class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title pull-left">{{ view_vars.title }}</h3>&nbsp;
+      {% for action in view_vars.actions %}
+        &nbsp;
+        <a href="{{ action.url }}" class="btn btn-primary btn-xs pull-right main-action"{% if action.extras == "popup" %} onclick="window.open(this.href,'','width=800,height=600'); return false;"{% endif %}>{% if action.image %}<span class="glyphicon glyphicon-{{ action.image }}"></span> {% endif %}{{ action.name }}</a>
+      {% endfor %}
+    </div>
+    <div class="panel-body">
+      {% block content-body %}{% endblock %}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+    {% if paginate_list %}
+      <ul class="pagination">
+        {% if paginate_list.has_previous %}
+        <li>
+          <a href="?p={{ paginate_list.previous_page_number }}">&laquo;</a>
+        {% else %}
+        <li class="disabled">
+            <a href="#">&laquo;</a>
+        {% endif %}
+        </li>
+        {% for page in paginate_list.paginator.page_range %}
+        <li {% if paginate_list.number == page %}class="active"{% endif %}><a href="?p={{ page }}">{{ page }} </a></li>
+        {% endfor %}
+        {% if paginate_list.has_next %}
+        <li>
+            <a href="?p={{ paginate_list.next_page_number }}">&raquo;</a>
+        {% else %}
+        <li class="disabled">
+            <a href="#" class="disabled">&raquo;</a>
+        {% endif %}
+        </li>
+      </ul>
+    {% endif %}
+    </div>
+  </div>
+</div>    
+{% endblock %}

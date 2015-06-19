@@ -1,0 +1,54 @@
+{% extends "sdn/base-content.html" %}
+{% load widget_tweaks %}
+{% load utils %}
+{% load inspect %}
+{% block content-body %}
+<div class="row">
+  <div class="col-md-12">
+    {% if form.non_field_errors %}<p class="text-danger">{{ form.non_field_errors }}</p>{% endif %}
+    <form class="form-horizontal" role="form" action="{{ form.action }}" method="post" {% if form.is_multipart %} enctype="multipart/form-data" {% endif %}>{% csrf_token %}
+      {% for field in form %}
+      <div class="form-group">
+        <label class="control-label col-sm-2" for="id_{{ field.html_name }}">{{ field.label }}</label>
+        <div class="col-sm-6">
+        {% if field|is_radio %}
+          {% for choice in field %}
+          <div class="radio">
+            <label>
+              {{ choice.tag }}
+              {{ choice.choice_label }}
+            </label>
+          </div>
+          {% endfor %}
+        {% else %}
+          {{ field | add_class:"form-control" }}
+        {% endif %}
+        </div>
+        <div class="col-sm-4">
+          <span class="help-inline">{{ field.help_text }}</span>
+          {% for error in field.errors %}<p class="text-danger">{{ error }}</p>{% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+        <div class="form-group">
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-2">
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </div>
+          <div class="col-sm-4">
+            {% if form.is_multipart %}
+                <div class="progress hidden">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+                    0%
+                  </div>
+                </div>
+            {% endif %}
+          </div>
+          <div class="col-sm-4">
+          </div>
+        </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

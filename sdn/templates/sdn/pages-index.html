@@ -1,0 +1,99 @@
+{% extends "sdn/base-content.html" %}
+{% block content-body %}
+<div class="row">
+  <div class="col-md-6 text-center">
+    <!--Resources Content-->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Resource Modules</h3>
+      </div>
+      <div class="panel-body">
+        <a href="/Aurora/sdn/resources/controllers/">
+          <span id="dashboard_globe" class="glyphicon glyphicon-globe"></span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 text-center">
+    <!--Visualization Content-->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Visualization Modules</h3>
+      </div>
+      <div class="panel-body">
+        <a href="/Aurora/sdn/visualizations/data_plane/">
+          <span id="dashboard_eye" class="glyphicon glyphicon-eye-open"></span>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    <div class="col-md-4 text-center">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Controllers</h3>
+        </div>
+        <div class="panel-body">
+          <a href="/Aurora/sdn/resources/controllers/">
+            <span class="icon_modules glyphicon glyphicon-road"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 text-center">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Switches</h3>
+        </div>
+        <div class="panel-body">
+          <a href="/Aurora/sdn/resources/switches/">
+            <span class="icon_modules glyphicon glyphicon-tasks"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 text-center">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Hosts</h3>
+        </div>
+        <div class="panel-body">
+          <a href="/Aurora/sdn/resources/hosts/">
+            <span class="icon_modules glyphicon glyphicon-user"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="col-md-6 text-center">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Data Plane</h3>
+        </div>
+        <div class="panel-body">
+          <a href="/Aurora/sdn/visualizations/data_plane/">
+            <span class="icon_modules glyphicon glyphicon-transfer"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 text-center">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Control Plane</h3>
+        </div>
+        <div class="panel-body">
+          <span class="icon_modules glyphicon glyphicon-retweet"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">&nbsp;</div>
+</div>
+{% endblock %}
