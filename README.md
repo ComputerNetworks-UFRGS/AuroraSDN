@@ -42,7 +42,7 @@ $ sudo apt-get install python-psycopg2 postgresql pgadmin3
 *Install [Django Widget Tweaks](https://github.com/kmike/django-widget-tweaks) module from pip*
 
 ```
-$ sudo pip install django-widget-tweaks
+$ sudo pip install django-widget-tweaks python-social-auth
 ```
 
 ##### Apache configuration for mod_wsgi
