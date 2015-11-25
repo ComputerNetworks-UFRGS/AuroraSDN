@@ -113,9 +113,9 @@ If you want to edit local django settings and avoid conflicts when pushing back 
 ```
 from settings import *
 DATABASES['default']['PASSWORD'] = 'yourpassword'
-STATIC_ROOT = '/home/user/Aurora/static/'
-MEDIA_ROOT = '/home/user/Aurora/manager/'
-LOGGING['handlers']['file']['filename'] = '/home/user/Aurora/logs/main.log'
+STATIC_ROOT = '/home/user/AuroraSDN/static/'
+MEDIA_ROOT = '/home/user/AuroraSDN/manager/'
+LOGGING['handlers']['file']['filename'] = '/home/user/AuroraSDN/logs/main.log'
 
 ADMINS = (
    ('You', 'you@yoursite.com'),
@@ -130,9 +130,9 @@ GOOGLE_OAUTH2_CLIENT_SECRET = '...'
 You can create log file wherever you like as you configured the variable LOGGING['handlers']['file']['filename']. In general, a logs directory can be created within the platform installation folder.
 
 ```
-$ mkdir Aurora/logs
-$ touch Aurora/logs/main.log
-$ chmod -R a+w Aurora/logs
+$ mkdir AuroraSDN/logs
+$ touch AuroraSDN/logs/main.log
+$ chmod -R a+w AuroraSDN/logs
 ```
 
 ##### Sync Django database and cache table
