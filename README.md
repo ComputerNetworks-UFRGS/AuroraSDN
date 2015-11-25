@@ -48,7 +48,7 @@ $ sudo pip install django-widget-tweaks
 ##### Apache configuration for mod_wsgi
 
 ```
-$ sudo cp Aurora/extras/apache/aurora.conf /etc/apache2/conf-available/
+$ sudo cp AuroraSDN/extras/apache/aurora.conf /etc/apache2/conf-available/
 $ cd /etc/apache2/conf-enabled/
 $ sudo ln -s ../conf-available/aurora.conf aurora.conf
 ```
