@@ -138,7 +138,7 @@ $ chmod -R a+w AuroraSDN/logs
 ##### Sync Django database and cache table
 
 ```
-$ cd Aurora
+$ cd AuroraSDN
 $ python manage.py syncdb
 ```
 
