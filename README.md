@@ -36,7 +36,7 @@ $ sudo apt-get install python-mysqldb mysql-server
 ##### If PostgreSQL database
 
 ```
-$ sudo apt-get install python-psycopg2 sudo postgresql pgadmin3
+$ sudo apt-get install python-psycopg2 postgresql pgadmin3
 ```
 
 *Install [Django Widget Tweaks](https://github.com/kmike/django-widget-tweaks) module from pip*
