@@ -86,8 +86,8 @@ WSGI_APPLICATION = 'Aurora.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'aurora',
-        'USER': 'root',
+        'NAME': 'aurorasdn',
+        'USER': 'aurorasdn',
         'PASSWORD': '',
         'HOST': '127.0.0.1',
         'PORT': '5432'
@@ -111,9 +111,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
-STATIC_URL = '/Aurora/static/'
+STATIC_URL = '/var/www/html/AuroraSDN/static/'
 
-MEDIA_ROOT = '/var/www/Aurora/sdn/'
+MEDIA_ROOT = '/var/www/html/AuroraSDN/sdn/'
 
 AUTHENTICATION_BACKENDS = (
     #'social.backends.open_id.OpenIdAuth',
@@ -142,9 +142,9 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 
 # URL to redirect user to login
-LOGIN_URL = '/Aurora/accounts/login/'
-LOGIN_REDIRECT_URL = '/Aurora/'
-LOGIN_ERROR_URL = '/Aurora/accounts/login-error/'
+LOGIN_URL = '/AuroraSDN/accounts/login/'
+LOGIN_REDIRECT_URL = '/AuroraSDN/'
+LOGIN_ERROR_URL = '/AuroraSDN/accounts/login-error/'
 
 LOGGING = {
     'version': 1,
@@ -157,7 +157,7 @@ LOGGING = {
         'file': {
             'level': 'DEBUG',
             'class': 'logging.FileHandler',
-            'filename': '/var/www/Aurora/logs/main.log',
+            'filename': '/var/www/html/AuroraSDN/logs/main.log',
             'formatter': 'verbose'
         }
     },
