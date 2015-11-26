@@ -48,12 +48,12 @@ $ sudo pip install django-widget-tweaks python-social-auth
 ##### Apache configuration for mod_wsgi
 
 ```
-$ sudo cp AuroraSDN/extras/apache/aurora.conf /etc/apache2/conf-available/
+$ sudo cp AuroraSDN/extras/apache/auroraSDN.conf /etc/apache2/conf-available/
 $ cd /etc/apache2/conf-enabled/
-$ sudo ln -s ../conf-available/aurora.conf aurora.conf
+$ sudo ln -s ../conf-available/auroraSDN.conf auroraSDN.conf
 ```
 
-*Note 1: Editing aurora.conf to match your local directory settings may be required.*
+*Note 1: Editing auroraSDN.conf to match your local directory settings may be required.*
 
 *Note 2: Make sure you have an early version of django (1.6 or newer) so that the platform can be installed as a wsgi application.*
 
@@ -88,9 +88,9 @@ $ sudo service apache2 restart
 Execute the following SQL code into your MySQL console to create a user and database for Aurora (replace *** with the password you want). 
 
 ```
-CREATE USER 'aurora'@'localhost' IDENTIFIED BY '***';
-CREATE DATABASE IF NOT EXISTS `aurora`;
-GRANT ALL PRIVILEGES ON `aurora`.* TO 'aurora'@'localhost';
+CREATE USER 'aurorasdn'@'localhost' IDENTIFIED BY '***';
+CREATE DATABASE IF NOT EXISTS `aurorasdn`;
+GRANT ALL PRIVILEGES ON `aurorasdn`.* TO 'aurorasdn'@'localhost';
 ```
 
 ##### Setup database for PostgreSQL
@@ -98,11 +98,11 @@ GRANT ALL PRIVILEGES ON `aurora`.* TO 'aurora'@'localhost';
 Execute the following SQL code into your pgAdmin III console to create a user and database for Aurora (replace *** with the password you want). 
 
 ```
-CREATE USER aurora WITH PASSWORD '***';
-CREATE DATABASE aurora
+CREATE USER aurorasdn WITH PASSWORD '***';
+CREATE DATABASE aurorasdn
   WITH ENCODING='UTF8'
        CONNECTION LIMIT=-1;
-GRANT ALL PRIVILEGES ON DATABASE aurora TO aurora;
+GRANT ALL PRIVILEGES ON DATABASE aurorasdn TO aurorasdn;
 ```
 
 
@@ -113,9 +113,9 @@ If you want to edit local django settings and avoid conflicts when pushing back 
 ```
 from settings import *
 DATABASES['default']['PASSWORD'] = 'yourpassword'
-STATIC_ROOT = '/home/user/AuroraSDN/static/'
-MEDIA_ROOT = '/home/user/AuroraSDN/manager/'
-LOGGING['handlers']['file']['filename'] = '/home/user/AuroraSDN/logs/main.log'
+STATIC_ROOT = '/var/www/html/AuroraSDN/static/'
+MEDIA_ROOT = '/var/www/html/AuroraSDN/manager/'
+LOGGING['handlers']['file']['filename'] = '/var/www/html/AuroraSDN/logs/main.log'
 
 ADMINS = (
    ('You', 'you@yoursite.com'),
