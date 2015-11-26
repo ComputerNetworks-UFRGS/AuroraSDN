@@ -18,12 +18,12 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-    <link rel="shortcut icon" href="/Aurora/static/sdn/img/sdn_interactive_manager.ico">
+    <link rel="shortcut icon" href="/AuroraSDN/static/sdn/img/sdn_interactive_manager.ico" type="image/x-icon">
 
-    <!-- Aurora specific style -->
-    <link href="/Aurora/static/sdn/css/style.css" rel="stylesheet">
+    <!-- AuroraSDN specific style -->
+    <link href="/AuroraSDN/static/sdn/css/style.css" rel="stylesheet">
     <!-- SDN specific style -->
-    <link href="/Aurora/static/sdn/css/data_plane.css" rel="stylesheet">
+    <link href="/AuroraSDN/static/sdn/css/data_plane.css" rel="stylesheet">
   </head>
   <body>
     <div class="navbar navbar-inverse navbar-fixed-top aurora-header" role="navigation"><!-- System header -->
@@ -35,7 +35,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/Aurora/">SDN Interactive Manager <sup><small>beta</small></sup></a>
+          <a class="navbar-brand" href="/AuroraSDN/">SDN Interactive Manager <sup><small>beta</small></sup></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-login">
           <ul class="nav navbar-nav pull-right">
@@ -51,7 +51,7 @@
                 <li class="disabled"><a href="#">Edit Profile</a></li>
                 <li class="disabled"><a href="#">Edit Groups</a></li>
                 <li class="divider"></li>
-                <li><a href="/Aurora/accounts/logout/">Sigsdadasdasdsn Out</a></li>
+                <li><a href="/AuroraSDN/accounts/logout/">Sigsdadasdasdsn Out</a></li>
               </ul>
             </li>-->
             {% endif %}
@@ -73,7 +73,7 @@
         <div class="collapse navbar-collapse" id="navbar-collapse-main">
           <ul class="nav navbar-nav">
             <li class="{% if view_vars.active_menu == "Dashboard" %} active{% endif %}">
-              <a href="/Aurora/">
+              <a href="/AuroraSDN/">
                 <span class="glyphicon glyphicon-home"></span>
                 Dashboard
               </a>
@@ -85,9 +85,9 @@
                 <b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><a href="/Aurora/sdn/resources/controllers/">Controllers</a></li>
-                <li><a href="/Aurora/sdn/resources/switches/">Switches</a></li>
-                <li><a href="/Aurora/sdn/resources/hosts/">Hosts</a></li>
+                <li><a href="/AuroraSDN/sdn/resources/controllers/">Controllers</a></li>
+                <li><a href="/AuroraSDN/sdn/resources/switches/">Switches</a></li>
+                <li><a href="/AuroraSDN/sdn/resources/hosts/">Hosts</a></li>
               </ul>
               </li>
               <li class="dropdown{% if view_vars.active_menu == "Visualizations" %} active{%endif%}">
@@ -97,7 +97,7 @@
                   <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="/Aurora/sdn/visualizations/data_plane/">Data Plane</a></li>
+                  <li><a href="/AuroraSDN/sdn/visualizations/data_plane/">Data Plane</a></li>
                 </ul>
               </li>
           </ul>
@@ -108,7 +108,7 @@
                   <b class="caret"></b>
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a href="/Aurora/accounts/logout/">Sign Out</a></li>
+                  <li><a href="/AuroraSDN/accounts/logout/">Sign Out</a></li>
                 </ul>
               </li>
           </ul>

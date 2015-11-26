@@ -4,7 +4,7 @@
     <div id="data_plane">
         <div class="row" id="controller_selected_panel">
             <div class="col-md-11">
-                <form id="form_select_controller" class="form-inline" action="/Aurora/sdn/visualizations/data_plane/controller/view/" method="post" onsubmit="selectController()">{% csrf_token %}
+                <form id="form_select_controller" class="form-inline" action="/AuroraSDN/sdn/visualizations/data_plane/controller/view/" method="post" onsubmit="selectController()">{% csrf_token %}
                     <label for="controller_selector">Selected Controller:</label>
                     <select class="form-control" id="controller_selector" name="controller_selector">
                         {% for controller in controller_list %}
@@ -82,7 +82,7 @@
                                         <label id="label_data_traffic_total" class="col-sm-12 control-label"></label>
                                         <label id="label_rules" class="col-sm-12 control-label"></label>
                                         <label id="label_switch_resource_percentage" class="col-sm-12 control-label"></label>
-                                        <img id="img_switch_resource_level" src="/Aurora/static/sdn/img/very_low.png" alt="..." class="img-circle">
+                                        <img id="img_switch_resource_level" src="/AuroraSDN/static/sdn/img/very_low.png" alt="..." class="img-circle">
                                         <label id="label_switch_resource_level" class="col-sm-12 control-label"></label>
                                     </div>
                                 </div>
@@ -247,16 +247,16 @@
 
                                     <label class="col-sm-1 control-label">Host:</label>
                                     <label class="col-sm-2 text-left">
-                                        <img src="/Aurora/static/sdn/img/black.png" width="25" height="25"  alt="..." class="img-circle">
+                                        <img src="/AuroraSDN/static/sdn/img/black.png" width="25" height="25"  alt="..." class="img-circle">
                                     </label>
                                     <label class="col-sm-1 control-label">Switch:</label>
                                     <label class="col-sm-2 text-center">
-                                        <img src="/Aurora/static/sdn/img/very_low.png" width="25" height="25"  alt="..." class="img-circle">
+                                        <img src="/AuroraSDN/static/sdn/img/very_low.png" width="25" height="25"  alt="..." class="img-circle">
                                     </label>
 
                                     <label class="col-sm-1 control-label">Link:</label>
                                     <label class="col-sm-2 text-left">
-                                        <img src="/Aurora/static/sdn/img/gray.png" width="100" height="5"  alt="..." class="img-rounded">
+                                        <img src="/AuroraSDN/static/sdn/img/gray.png" width="100" height="5"  alt="..." class="img-rounded">
                                     </label>
                                 </div>
                             </div>
@@ -269,23 +269,23 @@
                                     <label class="col-sm-3 control-label">Switch Color/Percentage:</label>
                                     <label class="col-sm-2">Very Low</label>
                                     <label class="col-sm-1 text-left">
-                                        <img src="/Aurora/static/sdn/img/very_low.png" width="25" height="25"  alt="..." class="img-circle">
+                                        <img src="/AuroraSDN/static/sdn/img/very_low.png" width="25" height="25"  alt="..." class="img-circle">
                                         <label>0~4%</label>
                                     </label>
                                     <label class="col-sm-1 text-center">
-                                        <img src="/Aurora/static/sdn/img/low.png" width="25" height="25"  alt="..." class="img-circle">
+                                        <img src="/AuroraSDN/static/sdn/img/low.png" width="25" height="25"  alt="..." class="img-circle">
                                         <label>5~9%</label>
                                     </label>
                                     <label class="col-sm-1 text-center">
-                                        <img src="/Aurora/static/sdn/img/medium.png" width="25" height="25"  alt="..." class="img-circle">
+                                        <img src="/AuroraSDN/static/sdn/img/medium.png" width="25" height="25"  alt="..." class="img-circle">
                                         <label>10~14%</label>
                                     </label>
                                     <label class="col-sm-1 text-center">
-                                        <img src="/Aurora/static/sdn/img/high.png" width="25" height="25"  alt="..." class="img-circle">
+                                        <img src="/AuroraSDN/static/sdn/img/high.png" width="25" height="25"  alt="..." class="img-circle">
                                         <label>15~19%</label>
                                     </label>
                                     <label class="col-sm-1 text-center">
-                                        <img src="/Aurora/static/sdn/img/very_high.png" width="25" height="25"  alt="..." class="img-circle">
+                                        <img src="/AuroraSDN/static/sdn/img/very_high.png" width="25" height="25"  alt="..." class="img-circle">
                                         <label>20~100%</label>
                                     </label>
                                     <label class="col-sm-2 text-center">Very High</label>
@@ -300,23 +300,23 @@
                                     <label class="col-sm-3 control-label">Switch Size/Percentage:</label>
                                     <label class="col-sm-2 text-right">Very Low</label>
                                     <label class="col-sm-1 control-label">
-                                        <img src="/Aurora/static/sdn/img/very_low.png" width="20" height="20"  alt="..." class="img-circle">
+                                        <img src="/AuroraSDN/static/sdn/img/very_low.png" width="20" height="20"  alt="..." class="img-circle">
                                         <label>0~4%</label>
                                     </label>
                                     <label class="col-sm-1 control-label">
-                                        <img src="/Aurora/static/sdn/img/very_low.png" width="25" height="25"  alt="..." class="img-circle">
+                                        <img src="/AuroraSDN/static/sdn/img/very_low.png" width="25" height="25"  alt="..." class="img-circle">
                                         <label>5~9%</label>
                                     </label>
                                     <label class="col-sm-1 control-label">
-                                        <img src="/Aurora/static/sdn/img/very_low.png" width="30" height="30"  alt="..." class="img-circle">
+                                        <img src="/AuroraSDN/static/sdn/img/very_low.png" width="30" height="30"  alt="..." class="img-circle">
                                         <label>10~14%</label>
                                     </label>
                                     <label class="col-sm-1 control-label">
-                                        <img src="/Aurora/static/sdn/img/very_low.png" width="35" height="35"  alt="..." class="img-circle">
+                                        <img src="/AuroraSDN/static/sdn/img/very_low.png" width="35" height="35"  alt="..." class="img-circle">
                                         <label>15~19%</label>
                                     </label>
                                     <label class="col-sm-1 control-label">
-                                        <img src="/Aurora/static/sdn/img/very_low.png" width="40" height="40"  alt="..." class="img-circle">
+                                        <img src="/AuroraSDN/static/sdn/img/very_low.png" width="40" height="40"  alt="..." class="img-circle">
                                         <label>20~100%</label>
                                     </label>
                                     <label class="col-sm-2 text-center">Very High</label>
@@ -333,24 +333,24 @@
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
 
-    <script type="text/javascript" src="/Aurora/static/sdn/js/d3/d3.v3.min.js"></script>
+    <script type="text/javascript" src="/AuroraSDN/static/sdn/js/d3/d3.v3.min.js"></script>
     <!--<script type="text/javascript" src="http://d3js.org/d3.v2.min.js"></script>-->
 
     <script type="text/javascript">
         var url = "{% url 'sdn-visualization-data_plane-data' selected_controller.id %}";
         var sync_url = "{% url 'resources.controllers.sync' selected_controller.id %}";
     </script>
-    <script type="text/javascript" src="/Aurora/static/sdn/js/data_plane/slider.js"></script>
-    <script type="text/javascript" src="/Aurora/static/sdn/js/data_plane/accordion.js"></script>
-    <script type="text/javascript" src="/Aurora/static/sdn/js/data_plane/data_plane.js"></script>
-    <script type="text/javascript" src="/Aurora/static/sdn/js/data_plane/topology_chart.js"></script>
-    <!--<script type="text/javascript" src="/Aurora/static/sdn/js/data_plane/donut3D_chart.js"></script>-->
-    <script type="text/javascript" src="/Aurora/static/sdn/js/data_plane/bullet_chart.js"></script>
-    <script type="text/javascript" src="/Aurora/static/sdn/js/data_plane/rule_chart.js"></script>
-    <script type="text/javascript" src="/Aurora/static/sdn/js/data_plane/up_traffic_chart.js"></script>
-    <script type="text/javascript" src="/Aurora/static/sdn/js/data_plane/up_packets_chart.js"></script>
-    <script type="text/javascript" src="/Aurora/static/sdn/js/data_plane/down_traffic_chart.js"></script>
-    <script type="text/javascript" src="/Aurora/static/sdn/js/data_plane/down_packets_chart.js"></script>
+    <script type="text/javascript" src="/AuroraSDN/static/sdn/js/data_plane/slider.js"></script>
+    <script type="text/javascript" src="/AuroraSDN/static/sdn/js/data_plane/accordion.js"></script>
+    <script type="text/javascript" src="/AuroraSDN/static/sdn/js/data_plane/data_plane.js"></script>
+    <script type="text/javascript" src="/AuroraSDN/static/sdn/js/data_plane/topology_chart.js"></script>
+    <!--<script type="text/javascript" src="/AuroraSDN/static/sdn/js/data_plane/donut3D_chart.js"></script>-->
+    <script type="text/javascript" src="/AuroraSDN/static/sdn/js/data_plane/bullet_chart.js"></script>
+    <script type="text/javascript" src="/AuroraSDN/static/sdn/js/data_plane/rule_chart.js"></script>
+    <script type="text/javascript" src="/AuroraSDN/static/sdn/js/data_plane/up_traffic_chart.js"></script>
+    <script type="text/javascript" src="/AuroraSDN/static/sdn/js/data_plane/up_packets_chart.js"></script>
+    <script type="text/javascript" src="/AuroraSDN/static/sdn/js/data_plane/down_traffic_chart.js"></script>
+    <script type="text/javascript" src="/AuroraSDN/static/sdn/js/data_plane/down_packets_chart.js"></script>
 
-    <script type="text/javascript" src="/Aurora/static/sdn/js/data_plane/select_controller.js"></script>
+    <script type="text/javascript" src="/AuroraSDN/static/sdn/js/data_plane/select_controller.js"></script>
 {% endblock %}

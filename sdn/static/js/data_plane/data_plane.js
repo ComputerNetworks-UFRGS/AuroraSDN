@@ -6,11 +6,11 @@ var old_dataset;
 // and Resource usage is the amount of flows installed on switches
 var metrics = {'color': 'control_channel_load',
                'size': 'resource_usage'};
-var level = {'very_high': {'top':100, 'bottom':20, 'size_value':35, 'color_value':'#FF3300', 'info':'red', 'color_img':'/Aurora/static/sdn/img/very_high.png'},
-             'high': {'top':20, 'bottom':15, 'size_value':30, 'color_value':'#FF9933', 'info':'orange', 'color_img':'/Aurora/static/sdn/img/high.png'},
-             'medium': {'top':15 , 'bottom':10, 'size_value':25, 'color_value':'#FAD739', 'info':'yellow', 'color_img':'/Aurora/static/sdn/img/medium.png'},
-             'low': {'top':10, 'bottom':5, 'size_value':20, 'color_value':'#3DBA3D', 'info':'green', 'color_img':'/Aurora/static/sdn/img/low.png'},
-             'very_low': {'top':5, 'bottom':0, 'size_value':15, 'color_value':'#6699FF', 'info':'blue', 'color_img':'/Aurora/static/sdn/img/very_low.png'}};
+var level = {'very_high': {'top':100, 'bottom':20, 'size_value':35, 'color_value':'#FF3300', 'info':'red', 'color_img':'/AuroraSDN/static/sdn/img/very_high.png'},
+             'high': {'top':20, 'bottom':15, 'size_value':30, 'color_value':'#FF9933', 'info':'orange', 'color_img':'/AuroraSDN/static/sdn/img/high.png'},
+             'medium': {'top':15 , 'bottom':10, 'size_value':25, 'color_value':'#FAD739', 'info':'yellow', 'color_img':'/AuroraSDN/static/sdn/img/medium.png'},
+             'low': {'top':10, 'bottom':5, 'size_value':20, 'color_value':'#3DBA3D', 'info':'green', 'color_img':'/AuroraSDN/static/sdn/img/low.png'},
+             'very_low': {'top':5, 'bottom':0, 'size_value':15, 'color_value':'#6699FF', 'info':'blue', 'color_img':'/AuroraSDN/static/sdn/img/very_low.png'}};
 
 $("#form_configurations").submit(function(e)
 {

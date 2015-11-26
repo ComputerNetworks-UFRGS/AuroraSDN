@@ -23,7 +23,7 @@ def index(request):
         'active_menu': active_menu,
         'title': "Controllers List",
         'actions': [{'name': "New Controller",
-        'url': "/Aurora/sdn/resources/controllers/new/"}]
+        'url': "/AuroraSDN/sdn/resources/controllers/new/"}]
     }
     c = Context({
         'controller_list': controller_list,
@@ -61,7 +61,7 @@ def sync(request, controller_id):
 
 #Form for new Switch creation
 class ControllerForm(forms.Form):
-    action = "/Aurora/sdn/resources/controllers/new/"
+    action = "/AuroraSDN/sdn/resources/controllers/new/"
     # Ip address
     ip_address = forms.CharField(max_length=50, label='IP Address')
 
@@ -106,7 +106,7 @@ def new(request):
         'active_menu': active_menu,
         'title': "New Controller",
         'actions': [
-            {'name': "Back to List", 'url': "/Aurora/sdn/resources/controllers/"},
+            {'name': "Back to List", 'url': "/AuroraSDN/sdn/resources/controllers/"},
         ]
     }
     c = RequestContext(request, {

@@ -4,7 +4,7 @@
         <div id="content">
             {% if selected_controller == null %}
                 <div class="col-md-10">
-                    <form id="form_select_controller" class="form-inline" action="/Aurora/sdn/visualizations/data_plane/controller/view/" method="post" onsubmit="selectController()">{% csrf_token %}
+                    <form id="form_select_controller" class="form-inline" action="/AuroraSDN/sdn/visualizations/data_plane/controller/view/" method="post" onsubmit="selectController()">{% csrf_token %}
                         <label for="controller_selector">Selected Controller:</label>
                         <select class="form-control" id="controller_selector" name="controller_selector">
                             {% for controller in controller_list %}
@@ -26,5 +26,5 @@
         <p>No Controllers are available.</p>
     {% endif %}
         </div>
-    <script type="text/javascript" src="/Aurora/static/sdn/js/data_plane/select_controller.js"></script>
+    <script type="text/javascript" src="/AuroraSDN/static/sdn/js/data_plane/select_controller.js"></script>
 {% endblock %}

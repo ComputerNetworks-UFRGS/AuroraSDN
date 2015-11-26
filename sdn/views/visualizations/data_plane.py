@@ -291,7 +291,7 @@ def selectController(request, controller_id):
         controller_list = Controller.objects.all()
         #if 'controller_selector' in request.POST:
         #selected_controller_id = request.POST['controller_selector']
-        configure_url = "/Aurora/sdn/visualizations/data_plane/controller/"+str(controller_id)+"/configure/"
+        configure_url = "/AuroraSDN/sdn/visualizations/data_plane/controller/"+str(controller_id)+"/configure/"
         selected_controller = Controller.objects.get(pk=controller_id)
         monitoring_configurations = loadConfiguration(selected_controller)
         configurations = getFloodlightConfigurations(selected_controller)
@@ -350,7 +350,7 @@ def configureController(request, controller_id):
     monitoring_configurations = {'polling_interval':request.POST['polling_interval_selector'],
                                 'chart_update_interval':request.POST['chart_update_selector']}
     saveConfiguration(selected_controller, monitoring_configurations)
-    return redirect('/Aurora/sdn/visualizations/data_plane/controller/' + controller_id + '/view/') # Redirect after POST
+    return redirect('/AuroraSDN/sdn/visualizations/data_plane/controller/' + controller_id + '/view/') # Redirect after POST
 
 def loadConfiguration(controller):
     try:
